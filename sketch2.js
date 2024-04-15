@@ -40,7 +40,10 @@ function draw () {
     // Stop after we have created totalCircles
     if (frameCount % 5 === 0 && count <= totalCircles) {
         let size = 20, // Size of a popcorn
-        circles.push(new Circle);
+        x = random(-4, 4),
+        y = random(-4, 4),
+        d = 20
+        circles.push(new Circle(x, y, d));
         count ++;
     }
     Engine.update(engine);
@@ -48,6 +51,19 @@ function draw () {
     // Display the popcorns
     for (let circle of circles) {
         circle.show();
+    }
+
+    // Generate the popcorn
+    class Circle {
+        constructor(x, y, d) {
+            let options = {
+                friction = 0.3, 
+                restitution = 0.6
+            };
+            this.body = Bodies.circle(x, y, d, options);
+            this.d = d;
+            World.add(world, this.body);
+        }
     }
 
     show() {
@@ -63,5 +79,4 @@ function draw () {
         rect(0, 0, this.w, this.h);
         pop();
     }
-
-    }
+}
