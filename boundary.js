@@ -13,7 +13,7 @@ class Boundary {
 
     show() {
         let pos = this.body.position; // Position of the falling popcorn
-        let angle = this.body.angle; // Angle of the falling popcorn
+        let angle = this.body.angle; // Angle of falling
         push();
         translate(pos.x, pos.y);
         rotate(angle); // The popcorns are rotating

@@ -10,7 +10,9 @@
 
 **← style.css** This file contains the code for the design of the website for the project.
 
-**← sketch.js** This is where the main code for the two data visualisation charts is, a bar chart and a falling popcorn chart. 
+**← sketch1.js** This is where the code for the data visualisation table chart is. 
+
+**← sketch2.js** This is where the code for the falling popcorn data visualisation is.
 
 **← p5.js** This is the p5.js framework for the project.
 
