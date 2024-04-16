@@ -57,8 +57,8 @@ function draw () {
     class Circle {
         constructor(x, y, d) {
             let options = {
-                friction = 0.3, 
-                restitution = 0.6
+                friction = 0.3, // Friction of the popcorn
+                restitution = 0.6 // Restitution of the popcorn
             };
             this.body = Bodies.circle(x, y, d, options);
             this.d = d;
@@ -76,7 +76,7 @@ function draw () {
         strokeWeight(1); // Stroke of the popcorn is thin
         stroke(0, 0, 102); // Color of Stroke - Dark Blue
         fill (255, 255, 188); // Color of Popcorn - Yellow
-        rect(0, 0, this.w, this.h);
+        rect(0, 0, this.d);
         pop();
     }
 }
