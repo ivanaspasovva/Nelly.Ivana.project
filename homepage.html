@@ -3,7 +3,15 @@
   <head>
     <title>Box Office Data Visualisation</title>
         <script src="sketch2.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
         
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
         <script src="src/p5.min.js"></script>
   <script src="src/p5.dom.min.js"></script>
   <script src="src/p5.sound.min.js"></script>
@@ -13,7 +21,8 @@
   </head>
   <body>
     <script src="p5.js"></script>
-
+    <div class="wrapper">
+      <div class="content">
     <header> 
      <h1> BOX OFFICE DATA </h1> 
     </header>
@@ -24,6 +33,62 @@
       <a href="analysis.html">Analysis</a>
   </nav>
     <section>
+
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <img src="images/avatar1.jpeg" alt="Image 1">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/Titanic-still-1-1024x585.jpeg" alt="Image 2">
+          </div>
+          <div class="carousel-slide">
+            <img src="images/jurassic-world-fallen-kingdom-image.webp" alt="Image 3">
+          </div>
+        </div>
+        <button class="prev-btn">Prev</button>
+        <button class="next-btn">Next</button>
+      </div>
+
+    <script>
+    
+      const carouselContainer = document.querySelector('.carousel-container');
+      const slides = document.querySelectorAll('.carousel-slide');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      
+      let currentIndex = 0;
+      const slideWidth = slides[0].clientWidth;
+      
+      // Move to the next slide
+      function nextSlide() {
+        currentIndex++;
+        if (currentIndex >= slides.length) {
+          currentIndex = 0;
+        }
+        updateSlidePosition();
+      }
+      
+      // Move to the previous slide
+      function prevSlide() {
+        currentIndex--;
+        if (currentIndex < 0) {
+          currentIndex = slides.length - 1;
+        }
+        updateSlidePosition();
+      }
+      
+      // Update the position of the slides
+      function updateSlidePosition() {
+        const offset = -currentIndex * slideWidth;
+        carouselContainer.style.transform = `translateX(${offset}px)`;
+      }
+      
+      // Event listeners for next and previous buttons
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+      </script>
+
       <h2>
         Visualising the box office performance data for films over the past few decades 
       </h2>
@@ -37,10 +102,16 @@
       <p>
        By visualising data on box office earnings, production budgets, and global market trends, a project such as this one can effectively showcase the economic significance of filmmaking.
       </p>
+      <p>
+
+      </p>
     </section>
+
+    <div class="footer">
     <footer>
       <p>&copy; MA2806 Data Visualisation Project </p>
-  </footer>
+    </footer>
+     </div>
   </body>
 </html>
 

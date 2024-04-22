@@ -1,71 +1,37 @@
-<!DOCTYPE html> 
-
-<html lang="en"> 
-
-<source src="film_countdown.mp4" type="video/mp4"> 
-
-<head> 
-
-<meta charset="UTF-8"> 
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-<title>Intro Video</title> 
-
-<style> 
-
-body, html { 
-
-margin: 0; 
-
-padding: 0; 
-
-height: 100%; 
-
-overflow: hidden; 
-
-} 
-
-video { 
-
-position: absolute; 
-
-top: 0; 
-
-left: 0; 
-
-width: 100%; 
-
-height: 100%; 
-
-} 
-
-</style> 
-
-</head> 
-
-<body> 
-
-<video id="intro-video" autoplay controls> 
-
-<source src="film_countdown.mp4" type="video/mp4"> 
-
-Your browser does not support the video tag. 
-
-</video> 
-
-<script> 
-
-var video = document.getElementById("intro-video"); 
-
-video.addEventListener("ended", function() { 
-
-window.location.href = "homepage.html"; // redirect to homepage after video ends 
-
-}); 
-
-</script> 
-
-</body> 
-
-</html> 
+<!DOCTYPE html>
+<html lang="en">
+    <source src="film_countdown.mp4" type="video/mp4">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Video</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <video id="intro-video" autoplay controls>
+        <source src="film_countdown.mp4" type="video/mp4">
+    
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        var video = document.getElementById("intro-video");
+        video.addEventListener("ended", function() {
+            window.location.href = "homepage.html"; // redirect to homepage after video ends
+        });
+    </script>
+</body>
+</html>
