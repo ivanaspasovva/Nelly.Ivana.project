@@ -57,8 +57,8 @@ function draw () {
     class Circle {
         constructor(x, y, d) {
             let options = {
-                friction = 0.3, // Friction of the popcorn
-                restitution = 0.6 // Restitution of the popcorn
+                friction: 0.3, // Friction of the popcorn
+                restitution: 0.6 // Restitution of the popcorn
             };
             this.body = Bodies.circle(x, y, d, options);
             this.d = d;
@@ -66,7 +66,7 @@ function draw () {
         }
     }
 
-    show() {
+    show() ;
         let pos = this.body.position; // Position of the falling popcorn
         let angle = this.body.angle; // Angle of the falling popcorn
         push();
@@ -79,4 +79,3 @@ function draw () {
         rect(0, 0, this.d);
         pop();
     }
-}
