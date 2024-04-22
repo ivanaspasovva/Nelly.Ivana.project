@@ -2,6 +2,8 @@ body {
     font-family: "Work Sans" , sans-serif;
     margin: 0;
     padding: 0;
+    outline: 2px;
+    outline-color: #671616;
 }
 header {
     font-family: "Anton", sans-serif;
