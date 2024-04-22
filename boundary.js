@@ -1,13 +1,14 @@
 class Boundary {
-    constructor(x, y, d) {
+    constructor(x, y, w, h) {
         let options = {
             friction: 0.3, // Friction of the popcorn
             restitution: 0.6, // Restitution
             isStatic: true,
 // Angle is PI / 4
         };
-        this.body = Bodies.circle(x, y, d, options);
-        this.d = d;
+        this.body = Bodies.circle(x, y, w, h, options);
+        this.w = w;
+        this.h = h;
         World.add(world, this.body);
     }
 
