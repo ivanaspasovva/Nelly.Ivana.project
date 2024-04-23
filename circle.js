@@ -2,7 +2,7 @@ class Circle {
     constructor(x, y, r) {
         let options = {
             friction: 0.3, // Friction of the falling popcorn
-            restitution: 0,6 // Restitution of the falling popcorn
+            restitution: 0.6 // Restitution of the falling popcorn
         };
         this.body = Bodies.circle(x, y, r, options);
         this.r = r;

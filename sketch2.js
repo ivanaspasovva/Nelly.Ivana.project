@@ -21,8 +21,8 @@ world;
 // The elements in our space
 let canvas;
 let grounds = [];
-let circles = []; // Popcorns
-let totalCircles = 30; // Final number of popcorns
+let boxes = []; // Popcorns
+let totalBoxes = 30; // Final number of popcorns
 
 function setup() {
 // Setup the canvas
@@ -70,7 +70,7 @@ function draw () {
 }
 
     // Generate the popcorn
-    class Circle {
+    class Circle1 {
         constructor(x, y, w, h) {
             let options = {
                 friction: 0.3, // Friction of the popcorn
