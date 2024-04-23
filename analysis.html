@@ -1,60 +1,69 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
-  <head>
-    <title>Box Office Data Visualisation</title>
 
-        <meta charset="utf-8"/>
+<head>
 
-        <script src="p5.js"></script>
-    
-        <!-- <script src="src/p5.min.js"></script>
-        <script src="src/p5.dom.min.js"></script>
-        <script src="src/p5.sound.min.js"></script> -->
-        <link rel="stylesheet" type="text/css" href="homepage.css" />
+  <meta charset="utf-8" />
+  <script src="falling-src/p5.min.js"></script>
+  <script src="falling-src/p5.dom.min.js"></script>
+  <script src="falling-src/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="homepage.css" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+          
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="content">
-        <script src="p5.js"></script>
-    <!--<script src="src/p5.min.js"></script>
-    <script src="src/p5.dom/min/js"></script>
-    <script src="src/p5.sound.min.js"></script>
-    <script src="src/matter.min.js"></script> -->
 
-    <header> 
-        <h1> ✮⋆˙ BOX OFFICE DATA ✮⋆˙ </h1> 
-       </header>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+  <script src="falling-src/matter.min.js"></script>
+  <script src="falling-src/circle.js"></script>
+  <script src="falling-src/boundary.js"></script>
+
+  <header> 
+    <h1> ✮⋆˙ BOX OFFICE DATA ✮⋆˙ </h1> 
+   </header>
+
+   <nav>
+     <a href="index.html">Home</a>
+     <a href="data.visualisation.html">Data Visualisation</a>
+     <a href="analysis.html">Analysis</a>
+   </nav>
    
-       <nav>
-         <a href="working-index.html">Home</a>
-         <a href="data.visualisation.html">Data Visualisation</a>
-         <a href="analysis.html">Analysis</a>
-    </nav>
+   <section>
 
-    <p> What do these trends mean?</p>
+     <h2>
+       Visualising the box office performance data for films over the past few decades 
+     </h2>
+     <p> DATA ANALYSIS - BAR CHART</p>
 
-    <div id="canvas-container"></div>
-
-    <div id="thesketch1">
+     <div id="thesketch1">
       <!--Link to your sketch code here: 
       replace "falling-src/sketch.js" with sketch1.js etc. -->
       <script src="sketch1.js"></script>
      </div>
-     </div>
+  
+     <p>
+        Here is an example of a data visualisation chart which portrays how much money the most successful film in the box office has made - also known as Avatar.
+     </p>
    
-    <div class="footer">
-     <footer>
-      <p>&copy; MA2806 Data Visualisation Project </p>
-  </footer>
-</div>
-  </body>
+     <p>
+      By visualising data on box office earnings, production budgets, and global market trends, a project such as this one can effectively showcase the economic significance of filmmaking.
+     </p>
+   </section>
+
+   <div class="footer">
+   <footer>
+     <p>&copy; MA2806 Data Visualisation Project </p>
+   </footer>
+  </div>
+
+</body>
 </html>

@@ -16,7 +16,7 @@ let Engine = Matter.Engine,
 let canvas;
 let grounds = [];
 let boxes = [];
-let totalBoxes = 30; 
+let totalBoxes = 60; 
 
 function setup() {
   // Setup the canvas & world
@@ -35,8 +35,8 @@ function setup() {
 
 let count = 0;
 function draw() {
-  // Make the background gray
-  background(240, 245, 245);
+  // Make the background burgundy
+  background(103, 22, 22);
 
   // Create a new box every 5 frames
   // Stop after we have created totalBoxes
