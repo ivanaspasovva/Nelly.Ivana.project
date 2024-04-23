@@ -6,76 +6,62 @@
  TYPE OF VISUALISATION: Table Chart Visualisation
  ************/
 
- let dataset; 
+ let dataset;
 
-let barWidth = 70; // Bar Width
-let margin = 30; // Margin size
-let scaling = 2; // Bar chart
+let barWidth = 150; // Bar Width
+let margin = 85; // Margin size
+let scaling = 25; // Bar chart scaling
 
 let infoParagraph;
 let infoHeader;
 
 function preload() {
-    dataset = loadTable("boxoffice.csv", "header"); // Header with the title
+    dataset = loadTable("boxoffice.csv", "header"); // Load the CSV file with header
 }
 
-// Run once when our index.html file is loaded first
 function setup() {
-    let visualisation = createCanvas(560, 600); // Width and height in pixels
-    visualisation.parent("canvas-container"); // Look at index.html
+    createCanvas(1250, 150); // Adjusted canvas height to accommodate more bars
+    background(255); // Set background color
 
-    infoHeader = createP("Click chart to display further information"); // Information on the chart
-    infoHeader.parent("context-tag");
-    infoHeader.class("date");
+    infoHeader = createP("Click on a bar to display further information."); // Create header paragraph
+    infoHeader.class("info-header");
 
-    infoParagraph = createP(); // Create Paragraph
-    infoParagraph.parent("context-tag"); // Look at index.html
+    infoParagraph = createP(); // Create paragraph for additional information
+    infoParagraph.class("info-paragraph");
 }
 
-// Drawing in run in a loop
 function draw() {
-    background (0, 38, 77); // Background color - Dark Blue
-    fill (245); // Lighter shade of blue - prone to change
-    textSize (18); 
-    textAlign (LEFT);
-    // text("Box Office results by year", 2009 to 2023", 25, 45);
-    cursor(ARROW);
-    noStroke();
+    background(255); // Refresh background to clear previous bars
 
-    for (let row = 0; row < dataset.getRowCount (); row ++) { // Starting with our data from row 0
-        let abbrRank = dataset.getString(row, 0); // Rank of the film
-        let infoYear = dataset.getString(row, 1); // Year of release of the film
-        let movie = dataset.getString(row, 2); // Name of the film
+    let y = 100; // Starting y-position for bars
+    textAlign(LEFT, CENTER); // Set text alignment
 
-        let barX = row * (barWidth + 5); // Width of BarX
-        let barY = height - 100; // Height of BarY
-        let barHeight = movie * scaling; 
+    // Loop through each row in the dataset
+    for (let i = 0; i < dataset.getRowCount(); i++) {
+        let rank = dataset.getNum(i, "Rank"); // Get rank from dataset
+        let year = dataset.getNum(i, "Year"); // Get year from dataset
+        let movie = dataset.getString(i, "Movie"); // Get movie title from dataset
+        let worldwideBoxOffice = dataset.getString(i, "Worldwide Box Office"); // Get worldwide box office earnings from dataset
+        let description = dataset.getString(i, "Description"); // Get description from dataset
 
-        if (
-            mouseX > barX &&
-            mouseX < barX + barWidth &&
-            mouseY > barY - barHeight &&
-            mouseY < barY
-        ) {
-            fill (255, 26, 26); // Red 
-            cursor ("pointer");
-            if (mouseIsPressed) {
-                let infoText = dataset.getString(row, 3);
-                infoHeader.html(infoYear);
-                infoParagraph.html(infoText);
-            }
-        } else {
-            fill (245); // Lighter shade of blue - prone to change
+        let barHeight = worldwideBoxOffice.replace(/\D/g, "") / 100000000; // Convert box office earnings to bar height
+        let x = margin + i * (barWidth + margin); // Calculate x-position for bar
+
+        // Draw the bar
+        fill(103, 22, 22); // Set fill color
+        rect(x, height - barHeight, barWidth, barHeight); // Draw rectangle representing the bar
+
+        // Display rank, year, and movie title above the bar
+        fill(0); // Set fill color to black
+        text(rank + ": " + year + ": " + movie, x, height - barHeight - 75); // Display rank, year, and movie title
+        textAlign(CENTER, CENTER); // Set text alignment to center
+        text(worldwideBoxOffice, x + barWidth / 2, height - barHeight - 35); // Display worldwide box office earnings
+
+        // Check if the mouse is over the current bar
+        if (mouseX > x && mouseX < x + barWidth && mouseY < height && mouseY > height - barHeight) {
+            // If mouse is over the bar, display additional information
+            infoHeader.html(description);
+            infoParagraph.html(description);
         }
-
-        rect (barX, barY, barWidth, -barHeight); // Rectangle
-
-        textSize (16);
-        textAlign (CENTER);
-        text (abbrRank, barX + barWidth / 2, barY + 25); // Mentions the rank of the film
-        fill (255, 26, 26); //Red
-        textSize(20);
-        text(movie, barX + barWidth / 2, barY - barHeight - 10); // Mentions the name of the film
-
     }
 }
