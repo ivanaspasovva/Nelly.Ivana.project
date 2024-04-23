@@ -6,7 +6,7 @@
  TYPE OF VISUALISATION: Table Chart Visualisation
  ************/
 
-let dataset; 
+ let dataset; 
 
 let barWidth = 70; // Bar Width
 let margin = 30; // Margin size
