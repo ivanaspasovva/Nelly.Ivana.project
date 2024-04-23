@@ -20,7 +20,7 @@ let totalBoxes = 30;
 
 function setup() {
   // Setup the canvas & world
-  canvas = createCanvas(400, 400);
+  canvas = createCanvas(500, 500);
   engine = Engine.create();
   world = engine.world;
   // Engine.run(engine);
@@ -41,12 +41,12 @@ function draw() {
   // Create a new box every 5 frames
   // Stop after we have created totalBoxes
   if (frameCount % 5 === 0 && count <= totalBoxes) {
-    let size = 40,
-        r = random(-8, 8),
+    let size = 60,
+        r = random(-10, 10),
         x = r+width/2, 
-        y = 100,
-        w = 40,
-        h = 40
+        y = 80,
+        w = 50,
+        h = 50
     boxes.push(new Box(x, y, w, h));
     count++; 
   }

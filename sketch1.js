@@ -22,7 +22,7 @@ function preload() {
 // Run once when our index.html file is loaded first
 function setup() {
     let visualisation = createCanvas(560, 600); // Width and height in pixels
-    visualisation.parent("canvas-tag"); // Look at index.html
+    visualisation.parent("canvas-container"); // Look at index.html
 
     infoHeader = createP("Click chart to display further information"); // Information on the chart
     infoHeader.parent("context-tag");
