@@ -7,6 +7,16 @@
   <script src="falling-src/p5.dom.min.js"></script>
   <script src="falling-src/p5.sound.min.js"></script>
   <link rel="stylesheet" type="text/css" href="homepage.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+          
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -14,8 +24,11 @@
   <script src="falling-src/circle.js"></script>
   <script src="falling-src/boundary.js"></script>
 
+    <div class="wrapper">
+    <div class="content">
+
   <header> 
-    <h1> BOX OFFICE DATA </h1> 
+    <h1> ✮⋆˙ BOX OFFICE DATA ✮⋆˙ </h1> 
    </header>
 
    <nav>
@@ -25,6 +38,69 @@
    </nav>
    
    <section>
+
+
+    <div class="carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <img src="images/avatar1.jpeg" alt="Image 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/titantic1.jpeg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/share.png" alt="Image 3">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/avengersendgame.jpeg" alt="Image 4">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/Spidey-banner-Cropped.jpeg" alt="Image 5">
+        </div>
+      </div>
+      <button class="prev-btn">Prev</button>
+      <button class="next-btn">Next</button>
+    </div>
+
+  <script>
+  
+    const carouselContainer = document.querySelector('.carousel-container');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    let currentIndex = 0;
+    const slideWidth = slides[0].clientWidth;
+    
+    // Move to the next slide
+    function nextSlide() {
+      currentIndex++;
+      if (currentIndex >= slides.length) {
+        currentIndex = 0;
+      }
+      updateSlidePosition();
+    }
+    
+    // Move to the previous slide
+    function prevSlide() {
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+      }
+      updateSlidePosition();
+    }
+    
+    // Update the position of the slides
+    function updateSlidePosition() {
+      const offset = -currentIndex * slideWidth;
+      carouselContainer.style.transform = `translateX(${offset}px)`;
+    }
+    
+    // Event listeners for next and previous buttons
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    </script>
+
      <h2>
        Visualising the box office performance data for films over the past few decades 
      </h2>
@@ -47,9 +123,11 @@
      </p>
    </section>
 
+   <div class="footer">
    <footer>
      <p>&copy; MA2806 Data Visualisation Project </p>
    </footer>
+  </div>
 
 </body>
 </html>
