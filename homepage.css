@@ -115,6 +115,9 @@ footer {
   
   .wrapper {
     min-height: 100%;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
     position: relative;
   }
   
@@ -130,4 +133,3 @@ footer {
     background-color: #333; /* Example background color */
     color: #fff; /* Example text color */
   }
-
