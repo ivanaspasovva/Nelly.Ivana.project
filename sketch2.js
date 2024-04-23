@@ -27,6 +27,8 @@ let totalBoxes = 30; // Final number of popcorns
 function setup() {
 // Setup the canvas
 canvas = createCanvas(600, 400); // Width and height of the canvas
+canvas.parent('thesketch');
+
 engine = Engine.create();
 world = engine.world;
 // Engine.run(engine);
