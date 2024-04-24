@@ -1,21 +1,25 @@
 # MA2806-BOX-OFFICE-2411284-2404688 (Ivana and Nelly)
 
-![An image](...) //Make sure we add a screenshot of our project in the brackets!!!
+![An image](website-layout.png)
 
 # Files and Folders
 
 **← README.md** Here we explain what our project does, how we built it, and other information.
 
-**← working-index.html** This file contains the code for the website for the homepage of our project. It is also set up for us to load the p5.js and sketch.js files.
+**← index.html** This file contains the code for the Home page of the website for our project. It is also set up for us to load the Java Script file, sketch.js.
 
-**← countdown.html** This file contains the code for the countdown for when a user clicks on the website. 
+**← data.visualisation.html** This file contains the code for the Data Visualisation page of the website for our project. It is also set up for us to load the Java Script file once again, sketch.js.
 
-**← style.css** This file contains the code for the design of the website for the project.
+**← analysis.html** This file contains the code for the Data Analysis page of the website for our project. It is also set up for us to load the Java Script file, barchart.js.
 
-**← sketch1.js** This is where the code for the data visualisation table chart is. 
+**← Countdown.html** This file contains the code for the countdown video which is **←film_countdown.mp4**
 
-**← sketch2.js** This is where the code for the falling popcorn data visualisation is.
+**← homepage.css** This file contains the code for the design of the website for the project.
 
-**← p5.js** This is the p5.js framework for the project.
+**← barchart.js** This file is containing the code for the Bar Chart visualisation.
 
-**← assets** Folder containing all of the other files that are associated with the project.
+**← falling-src** Folder containing all of the files connected to the falling object (popcorn) data visualisation.
+
+**← boxoffice.csv** Here is the information needed for the bar chart.
+
+**← images** Self explanatory, contains the images we need to use for the project.

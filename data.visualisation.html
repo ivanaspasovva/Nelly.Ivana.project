@@ -3,6 +3,10 @@
 
 <head>
 
+  <meta charset="utf-8" />
+  <script src="falling-src/p5.min.js"></script>
+  <script src="falling-src/p5.dom.min.js"></script>
+  <script src="falling-src/p5.sound.min.js"></script>
   <link rel="stylesheet" type="text/css" href="homepage.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +17,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+
 </head>
+
 <body>
+  <div class="wrapper">
+    <div class="content">
+  <script src="falling-src/matter.min.js"></script>
+  <script src="falling-src/circle.js"></script>
+  <script src="falling-src/boundary.js"></script>
 
   <header> 
     <h1> ✮⋆˙ BOX OFFICE DATA ✮⋆˙ </h1> 
@@ -25,26 +36,33 @@
      <a href="data.visualisation.html">Data Visualisation</a>
      <a href="analysis.html">Analysis</a>
    </nav>
+   
+   <section>
 
-   <p>
-    Our bar chart below shows the Top 5 most successful films in the box office with their years of publishing and the money they have made in the worldwide box office.
-  </p>
+     <h2>
+       Visualising the box office performance data for films over the past few decades 
+     </h2>
+     <p> DATA VISUALISATION</p>
 
-  </section>
-
-     <p> DATA ANALYSIS - BAR CHART</p>
-
-     <div id="thebarchart">
+     <div id="thesketch">
       <!--Link to your sketch code here: 
       replace "falling-src/sketch.js" with sketch1.js etc. -->
-      <script src="barchart.js"></script>
+      <script src="falling-src/sketch.js"></script>
      </div>
+  
+     <p>
+        Here is our data visualisation chart which portrays how much money the most successful film in the box office has made - also known as Avatar - as a  falling object visualisation with popcorn. Overall, Avatar has made $2,923,706,026.
+     </p>
+   
+     <p>
+      Each popcorn on the chart is worth $50,000.
+     </p>
+   </section>
 
+   <div class="footer">
    <footer>
      <p>&copy; MA2806 Data Visualisation Project </p>
    </footer>
-   <!--THE BELOW LINE LOADS IN P5.JS. DO NOT EDIT!-->
-   <script src="https://cdn.jsdelivr.net/npm/p5"></script>
   </div>
 
 </body>

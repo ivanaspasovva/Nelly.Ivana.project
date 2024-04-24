@@ -1,11 +1,6 @@
-Rank,Year,Movie,"Worldwide Box Office","Domestic Box Office","International Box Office". 
-1,2009,Avatar,"$2,923,706,026","$785,221,649","$2,138,484,377"
-2,2019,Avengers: Endgame,"$2,788,912,285","$858,373,000","$1,930,539,285"
-3,2022,Avatar: The Way of Water,"$2,317,514,386","$684,075,767","$1,633,438,619"
-4,1997,Titanic,"$2,223,048,786","$674,460,013","$1,548,588,773"
-5,2015,Star Wars Ep. VII: The Force Awakens,"$2,064,615,817","$936,662,225","$1,127,953,592"
-6,2018,Avengers: Infinity War,"$2,048,359,754","$678,815,482","$1,369,544,272"
-7,2021,Spider-Man: No Way Home,"$1,907,836,254","$814,115,070","$1,093,721,184"
-8,2015,Jurassic World,"$1,669,963,641","$652,306,625","$1,017,657,016"
-9,2019,The Lion King,"$1,646,106,779","$543,638,043","$1,102,468,736"
-10,2012,The Avengers,"$1,515,100,211","$623,357,910","$891,742,301"
+Rank,Year,Movie,"Worldwide Box Office",Description
+1,2009,Avatar,"$2,923,706,026",Avatar is a epic science fiction film directed written co-produced and co-edited by James Cameron.
+2,2019,Avengers,"$2,788,912,285",Marvel's The Avengers is a American superhero film based on the Marvel Comics superhero team of the same name which is produced by Marvel Studios.
+3,2022,Avatar: The Way of Water,"$2,317,514,386",Avatar is a epic science fiction film fully made by James Cameron.
+4,1997,Titanic,"$2,223,048,786",Titanic is a 1997 American romantic disaster film fully made by James Cameron.
+5,2015,Star Wars Ep. VII: The Force Awakens,"$2,064,615,817",Star Wars: The Force Awakens is an American epic space opera film co-produce co-written and directed by J. J. Abrams.
