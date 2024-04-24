@@ -6,7 +6,9 @@
 
 **← README.md** Here we explain what our project does, how we built it, and other information.
 
-**← index.html** This file contains the code for the website for our project. It is also set up for us to load the p5.js and sketch.js files.
+**← working-index.html** This file contains the code for the website for the homepage of our project. It is also set up for us to load the p5.js and sketch.js files.
+
+**← countdown.html** This file contains the code for the countdown for when a user clicks on the website. 
 
 **← style.css** This file contains the code for the design of the website for the project.
 
